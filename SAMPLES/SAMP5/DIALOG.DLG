@@ -1,0 +1,32 @@
+DLGINCLUDE 1 "H:\SOURCE\COMMON\LB\SAMPLES\SAMP5\dialog.h"
+
+DLGTEMPLATE DLG_EDIT LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Listbox Item", DLG_EDIT, 11, 49, 230, 44, WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        ENTRYFIELD      "", TEXT, 6, 29, 218, 8, ES_MARGIN
+        DEFPUSHBUTTON   "~OK", DID_OK, 6, 6, 40, 14
+        PUSHBUTTON      "~Cancel", DID_CANCEL, 53, 6, 51, 14
+    END
+END
+
+DLGTEMPLATE DLG_MAIN LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Export Database Fields", DLG_MAIN, 19, 6, 259, 145, WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LISTBOX         LIST2, 12, 47, 98, 78, LS_HORZSCROLL
+        DEFPUSHBUTTON   "~OK", DID_OK, 12, 2, 51, 14
+        LISTBOX         LIST1, 144, 48, 98, 78, LS_HORZSCROLL
+        CTEXT           "Fields", 104, 12, 131, 101, 8
+        CTEXT           "Export List", 105, 143, 132, 101, 8
+        LTEXT           "<-->", 107, 117, 88, 20, 8
+        GROUPBOX        "Sample", 102, 12, 19, 231, 25
+        PUSHBUTTON      "~Cancel", DID_CANCEL, 71, 2, 51, 14
+        LTEXT           "", SAMPLE, 16, 21, 223, 15, DT_WORDBREAK
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00000000L
+                        PRESPARAMS PP_BACKGROUNDCOLOR, 0x00FFFF00L
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    END
+END

@@ -1,0 +1,14 @@
+/* Resource File */
+#include <os2.h>
+#include "DIALOG.H"
+
+BITMAP (ID_BITMAPS+0)  num1.bmp
+BITMAP (ID_BITMAPS+1)  num2.bmp
+BITMAP (ID_BITMAPS+2)  num3.bmp
+BITMAP (ID_BITMAPS+3)  num4.bmp
+BITMAP (ID_BITMAPS+4)  num5.bmp
+BITMAP (ID_BITMAPS+5)  num6.bmp
+BITMAP (ID_BITMAPS+6)  num7.bmp
+
+rcinclude DIALOG.DLG
+

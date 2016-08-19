@@ -1,0 +1,28 @@
+# Make File for IBM C/Set compiler
+ 
+all: samp3.EXE
+samp3: samp3.EXE
+ 
+#--- Path to MCLB toolkit directory ---
+mclbdir = ..\..
+ 
+#For debugging:
+#iccflags  = /c /Gd- /Sm /Re /ss /Gm+ /Gt+ /Q /O- /Ti+ /Gh /I$(mclbdir)
+
+#For non-debug:
+iccflags   = /c /Gd- /Sm /Re /ss /Gm+ /Gt+ /Q /O+ /Ti- /I$(mclbdir)
+
+ 
+samp3.EXE:    samp3.OBJ samp3.RES samp3.DEF dmlb.obj
+  link386 /DEBUG /NOE /ALIGN:16 /EXEPACK /M /BASE:0x10000 samp3.OBJ dmlb.obj,,,,samp3.DEF;
+  rc samp3.RES
+ 
+samp3.OBJ:     samp3.C DIALOG.H samp3.h
+  icc $(iccflags) samp3.C
+
+dmlb.obj:      $(mclbdir)\dmlb.c $(mclbdir)\dmlb.h
+  icc $(iccflags) $(mclbdir)\dmlb.c
+ 
+samp3.RES:    DIALOG.DLG DIALOG.H samp3.RC samp3.h
+  rc -r -i $(mclbdir) samp3.RC samp3.RES
+

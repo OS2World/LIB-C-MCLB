@@ -1,0 +1,14 @@
+# Make File for online programming references.  Note this
+# requires the IPFCPREP pre-processor utility.
+ 
+all: mclb.inf dmlb.inf
+docs: mclb.inf dmlb.inf
+ 
+mclb.inf:      mclb.ipf
+  ipfcprep mclb.ipf mclb.pre
+  ipfc mclb.pre /inf
+ 
+dmlb.inf:      dmlb.ipf
+  ipfcprep dmlb.ipf dmlb.pre
+  ipfc dmlb.pre /inf
+

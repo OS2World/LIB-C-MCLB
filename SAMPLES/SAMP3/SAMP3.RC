@@ -1,0 +1,24 @@
+/* Resource File */
+#include <os2.h>
+#include "DIALOG.H"
+rcinclude DIALOG.DLG
+#include "samp3.h"
+
+#include "dmlb.h"        // DMLB Definitions
+
+/* Resources needed by DMLB */
+POINTER ID_DMLB_DRAGMOVE "..\\..\\lbdrag.ptr"
+POINTER ID_DMLB_DRAGCOPY "..\\..\\lbdragcp.ptr"
+POINTER ID_DMLB_DRAGNONE "..\\..\\nodrag.ptr"
+POINTER ID_DMLB_DRGNORTH "..\\..\\drgnorth.ptr"
+POINTER ID_DMLB_DRGSOUTH "..\\..\\drgsouth.ptr"
+POINTER ID_DMLB_DRGDEL   "..\\..\\drgdel.ptr"
+
+/* Context menu */
+MENU ID_MENU
+BEGIN
+  MENUITEM "~Edit",   ID_MENU_EDIT,       MIS_TEXT
+  MENUITEM "~Delete", ID_MENU_DELETE,     MIS_TEXT
+  MENUITEM "~Insert", ID_MENU_INSERT,     MIS_TEXT
+END
+

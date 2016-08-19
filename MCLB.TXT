@@ -1,0 +1,38 @@
+ This document is the programmer's reference for the MultiColumn ListBox (MCLB) PM control.  
+ For more information on programming with this control, see OS/2 Developer Magazine, 
+ Nov/Dec 1995. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Acknowledgments 
+ This control was originally conceived at the IBM United Kingdom Warwick Development 
+ group by Charles Cooper.  The control was rewritten and enhanced by Mark McMillan of IBM, 
+ Research Triangle Park, USA. 
+
+ Description 
+ The MultiColumn ListBox is a very useful PM custom control designed to overcome some 
+ of the limitations of the standard PM listbox and container controls.  It is simpler and in 
+ many cases faster than a container, but provides multicolumn (tabular) support for display of 
+ column-oriented data. 
+
+ The MCLB supports individually sizable columns, optional horizontal scroll bars at the base 
+ of each column, seperate font and color support for the titles and column data, owner-drawn 
+ lists, and a simple listbox-style programming model. 
+
+ The MCLB can be subclassed with the DMLB (Direct Manipulation ListBox) function also 
+ supplied in this toolkit to provide drag/drop reordering capability to the MCLB. 
+

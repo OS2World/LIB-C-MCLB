@@ -1,0 +1,4 @@
+/* Resource File */
+#include <os2.h>
+#include "DIALOG.H"
+rcinclude DIALOG.DLG

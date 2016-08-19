@@ -1,0 +1,15 @@
+/* Resource File */
+#include <os2.h>
+#include "DIALOG.H"
+rcinclude DIALOG.DLG
+
+#include "dmlb.h"
+
+/* Resources needed by DMLB */
+POINTER ID_DMLB_DRAGMOVE "..\\..\\lbdrag.ptr"
+POINTER ID_DMLB_DRAGCOPY "..\\..\\lbdragcp.ptr"
+POINTER ID_DMLB_DRAGNONE "..\\..\\nodrag.ptr"
+POINTER ID_DMLB_DRGNORTH "..\\..\\drgnorth.ptr"
+POINTER ID_DMLB_DRGSOUTH "..\\..\\drgsouth.ptr"
+POINTER ID_DMLB_DRGDEL   "..\\..\\drgdel.ptr"
+

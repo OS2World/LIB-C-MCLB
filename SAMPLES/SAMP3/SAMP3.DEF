@@ -1,0 +1,7 @@
+; Module definition file
+ 
+NAME CNAMENAME WINDOWAPI
+DESCRIPTION '(c) Copyright IBM Corp. 1995'
+PROTMODE
+STACKSIZE 32000
+
